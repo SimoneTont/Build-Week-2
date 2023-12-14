@@ -11856,5 +11856,16 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-color: antiquewhite;
-}/*# sourceMappingURL=style.css.map */
+  background-color: black;
+}
+
+.mainContainer {
+  width: 95%;
+  margin-left: 2em;
+}
+
+/*.mainContainer .row
+{
+    padding-left: -2em;
+    padding-right: -2em;
+}*//*# sourceMappingURL=style.css.map */
