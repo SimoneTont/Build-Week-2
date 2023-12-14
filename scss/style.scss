@@ -1,4 +1,7 @@
 @import '_override_bootstrap.scss';
+body{
+    font-family: "Circular";
+  }
 nav{
     background-color: $spotifyColor;
 }
