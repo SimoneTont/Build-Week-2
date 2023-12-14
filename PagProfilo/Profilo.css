@@ -35,3 +35,19 @@ footer a:hover{
 #navbarNav a:hover{
     color: #1ED760;
 }
+main{
+    background-color: #121212;
+}
+main div{
+    background-color: #232323;
+}
+.grey{
+    background-color:#494848 ;
+}
+.hover:hover{
+    background-color: #1A1A1A;
+    cursor: pointer;
+}
+body{
+    background-color: #121212;
+}
