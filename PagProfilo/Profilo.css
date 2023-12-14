@@ -13,7 +13,8 @@ a i{
     margin-right: 1em;
 }
 .prova:hover{
-    background-color: green;
+    background-color: #1ED760;
+    cursor: pointer;
 }
 footer .card-text a{
     color: white;
@@ -21,14 +22,16 @@ footer .card-text a{
 }
 
 footer a:hover{
-    color: green;
+    color: #1ED760;
 }
 .colore{
     color: gray;
     font-size: 0.8em;
     margin-right:1em ;
 }
-
-header a:hover{
-    color: green;
+#navbarNav a{
+    color: white;
+}
+#navbarNav a:hover{
+    color: #1ED760;
 }
