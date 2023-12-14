@@ -1,5 +1,10 @@
 @import '_override_bootstrap.scss';
-body
-{
-    background-color: antiquewhite;
+
+body {
+  background-color: black;
+}
+
+.mainContainer {
+  width: 95%;
+  margin-left: 2em;
 }
