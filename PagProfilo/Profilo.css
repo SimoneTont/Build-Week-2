@@ -2,6 +2,52 @@ footer img{
     width: 10em;
 }
 a i{
+    width: 5em;
+    height: 5em;
+
+}
+.svg>svg{
+    background-color: white;
+    border-radius: 50%;
+    color:#222326;
     margin-right: 1em;
 }
- 
+.prova:hover{
+    background-color: #1ED760;
+    cursor: pointer;
+}
+footer .card-text a{
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: #1ED760;
+}
+.colore{
+    color: gray;
+    font-size: 0.8em;
+    margin-right:1em ;
+}
+#navbarNav a{
+    color: white;
+}
+#navbarNav a:hover{
+    color: #1ED760;
+}
+main{
+    background-color: #121212;
+}
+main div{
+    background-color: #232323;
+}
+.grey{
+    background-color:#494848 ;
+}
+.hover:hover{
+    background-color: #1A1A1A;
+    cursor: pointer;
+}
+body{
+    background-color: #121212;
+}
