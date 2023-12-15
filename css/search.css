@@ -11874,7 +11874,6 @@ svg {
   
   .search::placeholder {
     color: rgb(98, 98, 98);
-    padding-left: 20px;
   }
   
   .search:active {
