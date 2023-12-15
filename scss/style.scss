@@ -2,3 +2,21 @@
 body{
     font-family: "Circular";
   }
+/* colore sfondo dal più scuro al più chiaro */
+.bg-gray-1 {
+  background-color: rgba(18, 18, 18, 7);
+}
+
+.bg-gray-2 {
+  background-color: rgba(35, 35, 35, 14);
+}
+
+/* colore testo grigio chiaro */
+.txt-gray-3 {
+  color: rgba(167, 167, 167, 65);
+}
+
+/* colore testo verde */
+.txt-green {
+  color: rgba(33, 215, 96, 84);
+}
