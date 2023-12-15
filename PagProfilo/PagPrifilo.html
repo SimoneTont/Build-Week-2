@@ -11,53 +11,51 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg d-flex justify-content-between ">
+    <nav class="navbar navbar-expand-lg  ">
         <div class="container">
-            <div>
-                <a class="navbar-brand" href="#">
-                    <img src="../imgs/Spotify_Logo_RGB_White.png" class="ms-5" alt="" width="150">
+                <a class="navbar-brand" href="../html/homepage.html">
+                    <img src="../imgs/Spotify_Logo_RGB_White.png" alt="" width="150">
                 </a>
-            </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav d-flex align-items-center fw-bold ">
-                  <li class="nav-item">
-                    <a class="nav-link me-3" href="#">Premium</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link  me-3" href="#">Assistenza</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link  me-5" href="#">Scarica</a>
-                  </li>
-                  <li class="nav-item ">
-                    <i class="bi bi-person-circle text-white fs-1 "></i>
-                  </li>
-                  <li class="nav-item dropdown me-3">
-                    <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Profilo
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                      <li><a class="dropdown-item text-black fw-bold" href="#">Account</a></li>
-                      <li><a class="dropdown-item text-secondary fw-bold" href="#">Esci</a></li>
+                <button class="navbar-toggler grey" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav d-flex fw-bold ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link me-3" href="#">Premium</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link  me-3" href="#">Assistenza</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link  me-3" href="#">Scarica</a>
+                      </li>
+                      <li class="nav-item">
+                        <i class="bi bi-person-circle text-white fs-3 "></i>
+                      </li>
+                      <li class="nav-item dropdown me-3">
+                        <a class="nav-link dropdown-toggle align-top position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span>Profilo</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item text-black fw-bold" href="#">Account</a></li>
+                          <li><a class="dropdown-item text-secondary fw-bold" href="#">Esci</a></li>
+                        </ul>
+                      </li>
                     </ul>
-                  </li>
-                </ul>
-              </div>
-          </div>
+                  </div>
         </div>
       </nav>
 </header>
     <main>
-        <div class="container w-50 mb-4 rounded-3 p-3">
-          <div class="row">
-            <h4 class="p-3 text-white m-0">Account</h4>
+        <div class="container-sm mt-5 mb-4 rounded-3 p-3">
+          <div class="row ">
+            <div class="col-sm">
+              <h4 class="p-3 text-white m-0">Account</h4>
+            </div>
           </div>
             <div class="row justify-content-between ">
-                <div class="col p-3 hover rounded-2">
+                <div class="col-sm p-3 hover rounded-2">
                   <i class="bi bi-pen border-dark text-white-50 grey p-2 rounded-2 fs-5 me-2"></i> <span class="text-white">Profilo</span> <span class="float-end"><i class="bi bi-chevron-right text-secondary"></i></span>
                 </div>
             </div>
@@ -67,7 +65,7 @@
               </div>
           </div>
         </div>
-        <div class="container w-50 mb-4 rounded-3 p-3">
+        <div class="container-sm  mb-4 rounded-3 p-3">
           <div class="row">
             <h4 class="p-3 text-white m-0">Pagamento</h4>
           </div>
@@ -87,7 +85,7 @@
             </div>
         </div>
         </div>
-        <div class="container w-50 mb-4 rounded-3 p-3">
+        <div class="container-sm  mb-4 rounded-3 p-3">
                 <div class="row">
                   <h4 class="p-3 text-white m-0">Sicurezza e privacy</h4>
                 </div>
@@ -122,7 +120,7 @@
             </div>
         </div>
         </div>
-        <div class="container w-50 mb-4 rounded-3 p-3">
+        <div class="container-sm mb-4 rounded-3 p-3">
           <div class="row">
             <h4 class="p-3 text-white m-0">Assistenza</h4>
           </div>
@@ -134,10 +132,10 @@
         </div>
     </main>
     <footer class="bg-black pt-5">
-        <div class="container w-75 mb-5">
+        <div class="container-sm mb-5">
             <div class="row">
                 <div class="col align-text-bottom">
-                   <img src="../imgs/Spotify_Logo_RGB_White.png" alt="logo">
+                   <a href="../html/homepage.html"><img src="../imgs/Spotify_Logo_RGB_White.png" alt="logo"></a>
                 </div>
                 <div class="col">
                     <div class="card mb-3 border-0 grand" >
@@ -189,17 +187,17 @@
                 </div>
             </div>
         </div>
-        <div class="container w-75 ">
-            <div class="row justify-content-between pb-3">
-                <div class="col-1">
+        <div class="container-sm  ">
+            <div class="row justify-content-between pb-3 ">
+                <div class="col-md-1">
 
                 </div>
-                <div class="col-1 text-end text-secondary">
+                <div class="col-md-1 text-secondary">
                     <i class="bi bi-globe-americas"></i> <a class="text-decoration-none colore" href="#">Italia</a>
                 </div>
             </div>
             <div class="row justify-content-between pb-4">
-                <div class="col-10">
+                <div class="col-md-10">
                     <a class="text-decoration-none colore " href="#">Informazioni legali
                     </a>
                     <a class="text-decoration-none colore " href="#">Centro sulla privacy
@@ -213,7 +211,7 @@
                     <a class="text-decoration-none colore " href="#">Accessibilità
                     </a>
                 </div>
-                <div class="col text-end">
+                <div class="col-md text-end">
                     <p class="colore">&copy; 2023 Spotify AB</p>
                 </div>
             </div>
