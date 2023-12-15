@@ -11893,6 +11893,11 @@ body {
   background-color: rgb(35, 35, 35);
 }
 
+/*Sfondo verde Spotify*/
+.bg-green {
+  background-color: rgb(33, 215, 96);
+}
+
 /* colore testo grigio chiaro */
 .txt-gray-3 {
   color: rgb(167, 167, 167);

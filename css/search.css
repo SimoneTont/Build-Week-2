@@ -11875,7 +11875,7 @@ svg {
   .search::placeholder {
     color: rgb(98, 98, 98);
   }
-  
+
   .search:active {
     background-color: rgb(27, 27, 27);
     border-color: white;
@@ -11886,7 +11886,10 @@ svg {
     border-color: white;
     box-shadow: none;
   }
-  
+input{
+  padding: 80px;
+}
+
   .classSvg > svg {
     padding: 3px;
   }
@@ -11942,4 +11945,54 @@ svg {
     position: sticky;
     top: 0;
     z-index: 1020;
-  }/*# sourceMappingURL=style.css.map */
+  }
+
+  
+  @media screen and (max-width:576px){
+    .search::placeholder {
+      background-color: white;
+      color: rgb(98, 98, 98);
+      padding-left: 20px;
+    }
+    .musica {
+      height: 200px;
+      width: 150px;
+      border-color: gray;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+.search{
+  background-color: white;
+  width: 350px;
+  border-radius: 10px;
+  
+
+}
+
+.immaginiCard {
+  position: absolute;
+  bottom: -20px;
+  right: -17px;
+  height: 120px;
+  rotate: 30deg;
+  box-shadow: 2px 2px 2px black;
+}
+
+
+  }
+  .footer { display:flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    position: fixed;
+    bottom: 0;
+    height: 70px;
+    width: 100%; /* Ensures the footer extends the full width of the screen */
+    background-color: #00000087; /* Optional: Adds a background color to the footer */
+    z-index: 1000; /* Ensures the footer stays above other content */
+  }
+  .footer > svg{
+    padding:5px;
+    background-color: #00000087;
+  }
