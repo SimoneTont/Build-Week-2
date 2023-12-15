@@ -1,5 +1,29 @@
 @charset "UTF-8";
 @import "../css/circular-font.css";
+.fs-7 {
+  font-size: 1rem;
+}
+
+.fs-8 {
+  font-size: 0.9rem;
+}
+
+.fs-9 {
+  font-size: 0.8rem;
+}
+
+.fs-10 {
+  font-size: 0.7rem;
+}
+
+.fs-11 {
+  font-size: 0.6rem;
+}
+
+.fs-12 {
+  font-size: 0.5rem;
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -11861,4 +11885,23 @@ nav {
 }
 body {
   font-family: "Circular";
+}
+
+/* colore sfondo dal più scuro al più chiaro */
+.bg-gray-1 {
+  background-color: rgb(18, 18, 18);
+}
+
+.bg-gray-2 {
+  background-color: rgb(35, 35, 35);
+}
+
+/* colore testo grigio chiaro */
+.txt-gray-3 {
+  color: rgb(167, 167, 167);
+}
+
+/* colore testo verde */
+.txt-green {
+  color: rgb(33, 215, 96);
 }/*# sourceMappingURL=style.css.map */

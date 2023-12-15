@@ -1,89 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleHomepage.css">
-    <title>Document</title>
+    <title>Home</title>
     <script src="../js/script.js"></script>
 </head>
+
 <body>
     <!--Colonne principali-->
-    <main>
-        <div class="container-fluid mainContainer text-center p-4">
-            <div class="row vh-100 gap-3 flex-nowrap">
-              <div class="col-2 bg-dark text-light">
-                <!--Home e cerca-->
-                <div class="p-1 m-1 mt-5 rounded-2 border border-danger border-1">
-                    <div class="d-flex gap-2 my-1">
-                        <i class="bi bi-house-door-fill"></i>
-                        <p>Home</p>
-                    </div>
-                    <div class="d-flex gap-2 my-1">
-                        <i class="bi bi-search"></i>
-                        <p>Cerca</p>
-                    </div>
-                </div>
-                <!--Libreria-->
-                <div class="d-flex justify-content-between h-auto mt-5 border border-danger">
-                    <div class="d-flex gap-2 my-1">
-                        <i class="bi bi-collection-fill"></i>
-                        <p>La tua libreria</p>
-                    </div>
-                    <div class="d-flex  gap-2 my-1">
-                        <i class="bi bi-arrow-right"></i>
-                        <i class="bi bi-plus-lg"></i>
-                    </div>
-                </div>
-                <div class="d-flex gap-2 mt-2">
-                    <button class="rounded-pill">Playlist</button>
-                    <button class="rounded-pill">Album</button>
-                    <button class="rounded-pill">Artisti</button>
-                </div>
-                <div class="d-flex flex-column">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <i class="bi bi-search"></i>
-                        <div class="d-flex gap-2">
-                            <p>Recenti</p>
-                            <i class="bi bi-list-ul"></i>
+    <main class="vh-100">
+        <div class="mainContainer ">
+            <div class="row p-0 flex-nowrap">
+                <!-- inizio colonna destra -->
+                <div class="col-2 text-light">
+                    <!--Home e cerca-->
+                    <div class="p-3 rounded-2 bg-gray-1 first-container fs-9">
+                        <div>
+                            <a href="homepage.html" class="text-decoration-none text-white">
+                                <i class="bi bi-house-door-fill me-2"></i>Home
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="#" class="text-decoration-none txt-gray-3">
+                                <i class="bi bi-search me-2"></i>Cerca
+                            </a>
                         </div>
                     </div>
-                    <!--Prototipo card-->
-                    <div>
-                        <div class="d-flex align-items-center p-2 gap-2">
-                            <div class="imgRightBar h-25 w-25 overflow-hidden rounded">
-                                <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460" class="img-fluid">
+                    <!--Libreria-->
+                    <div class="rounded-2 bg-gray-1">
+                        <div class="d-flex justify-content-between align-items-center p-3 mt-2 fs-9">
+                            <div class="d-flex gap-2">
+                                <a href="#" class="text-decoration-none txt-gray-3">
+                                    <i class="bi bi-collection-fill me-2"></i>
+                                    La tua libreria</a>
                             </div>
-                            <div class="d-flex align-items-center flex-column">
-                                <p class="m-0">Brani che ti piacciono</p>
-                                <div class="d-flex m-0">
-                                    <i class="bi bi-pin-angle-fill"></i>
-                                    <p class="m-0">Playlist &#183; 25 brani</p>
+                            <div class="d-flex gap-2">
+                                <a href="#" class="txt-gray-3"><i class="bi bi-plus-lg"></i></a>
+                                <a href="#" class="txt-gray-3"><i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="ps-3 fs-10 mb-2">
+                            <a href="#"
+                                class="bg-gray-2 text-decoration-none text-white py-1 px-2 rounded-pill">Playlist</a>
+                            <a href="#"
+                                class="bg-gray-2 text-decoration-none text-white py-1 px-2 rounded-pill">Album</a>
+                            <a href="#"
+                                class="bg-gray-2 text-decoration-none text-white py-1 px-2 rounded-pill">Artisti</a>
+                        </div>
+                        <div class="d-flex flex-column overflow-y-scroll divScroll p-3">
+                            <div class="d-flex justify-content-between align-items-center fs-10 mb-2">
+                                <a href="#" class="txt-gray-3">
+                                    <i class="bi bi-search m-0"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none txt-gray-3">Recenti
+                                    <i class="bi bi-list-ul ms-1"></i>
+                                </a>
+                            </div>
+                            <!--Prototipo card-->
+
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="h-25 w-25 overflow-hidden rounded">
+                                    <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460"
+                                        class="img-fluid">
+                                </div>
+                                <div class="d-flex flex-column fs-11 my-1">
+                                    <p class="m-0 fw-bold">Brani che ti piacciono</p>
+                                    <div class="d-flex m-0 txt-gray-3">
+                                        <i class="bi bi-pin-angle-fill txt-green me-1"></i>
+                                        <p class="m-0">Playlist &#183; 25 brani</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="h-25 w-25 overflow-hidden rounded">
+                                    <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460"
+                                        class="img-fluid">
+                                </div>
+                                <div class="d-flex flex-column fs-11 my-1">
+                                    <p class="m-0 fw-bold">Brani che ti piacciono</p>
+                                    <div class="d-flex m-0 txt-gray-3">
+                                        <i class="bi bi-pin-angle-fill txt-green me-1"></i>
+                                        <p class="m-0">Playlist &#183; 25 brani</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="h-25 w-25 overflow-hidden rounded">
+                                    <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460"
+                                        class="img-fluid">
+                                </div>
+                                <div class="d-flex flex-column fs-11 my-1">
+                                    <p class="m-0 fw-bold">Brani che ti piacciono</p>
+                                    <div class="d-flex m-0 txt-gray-3">
+                                        <i class="bi bi-pin-angle-fill txt-green me-1"></i>
+                                        <p class="m-0">Playlist &#183; 25 brani</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="h-25 w-25 overflow-hidden rounded">
+                                    <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460"
+                                        class="img-fluid">
+                                </div>
+                                <div class="d-flex flex-column fs-11 my-1">
+                                    <p class="m-0 fw-bold">Brani che ti piacciono</p>
+                                    <div class="d-flex m-0 txt-gray-3">
+                                        <i class="bi bi-pin-angle-fill txt-green me-1"></i>
+                                        <p class="m-0">Playlist &#183; 25 brani</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="h-25 w-25 overflow-hidden rounded">
+                                    <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460"
+                                        class="img-fluid">
+                                </div>
+                                <div class="d-flex flex-column fs-11 my-1">
+                                    <p class="m-0 fw-bold">Brani che ti piacciono</p>
+                                    <div class="d-flex m-0 txt-gray-3">
+                                        <i class="bi bi-pin-angle-fill txt-green me-1"></i>
+                                        <p class="m-0">Playlist &#183; 25 brani</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="h-25 w-25 overflow-hidden rounded">
+                                    <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460"
+                                        class="img-fluid">
+                                </div>
+                                <div class="d-flex flex-column fs-11 my-1">
+                                    <p class="m-0 fw-bold">Brani che ti piacciono</p>
+                                    <div class="d-flex m-0 txt-gray-3">
+                                        <i class="bi bi-pin-angle-fill txt-green me-1"></i>
+                                        <p class="m-0">Playlist &#183; 25 brani</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="h-25 w-25 overflow-hidden rounded">
+                                    <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460"
+                                        class="img-fluid">
+                                </div>
+                                <div class="d-flex flex-column fs-11 my-1">
+                                    <p class="m-0 fw-bold">Brani che ti piacciono</p>
+                                    <div class="d-flex m-0 txt-gray-3">
+                                        <i class="bi bi-pin-angle-fill txt-green me-1"></i>
+                                        <p class="m-0">Playlist &#183; 25 brani</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="h-25 w-25 overflow-hidden rounded">
+                                    <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460"
+                                        class="img-fluid">
+                                </div>
+                                <div class="d-flex flex-column fs-11 my-1">
+                                    <p class="m-0 fw-bold">Brani che ti piacciono</p>
+                                    <div class="d-flex m-0 txt-gray-3">
+                                        <i class="bi bi-pin-angle-fill txt-green me-1"></i>
+                                        <p class="m-0">Playlist &#183; 25 brani</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="h-25 w-25 overflow-hidden rounded">
+                                    <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460"
+                                        class="img-fluid">
+                                </div>
+                                <div class="d-flex flex-column fs-11 my-1">
+                                    <p class="m-0 fw-bold">Brani che ti piacciono</p>
+                                    <div class="d-flex m-0 txt-gray-3">
+                                        <i class="bi bi-pin-angle-fill txt-green me-1"></i>
+                                        <p class="m-0">Playlist &#183; 25 brani</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="h-25 w-25 overflow-hidden rounded">
+                                    <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460"
+                                        class="img-fluid">
+                                </div>
+                                <div class="d-flex flex-column fs-11 my-1">
+                                    <p class="m-0 fw-bold">Brani che ti piacciono</p>
+                                    <div class="d-flex m-0 txt-gray-3">
+                                        <i class="bi bi-pin-angle-fill txt-green me-1"></i>
+                                        <p class="m-0">Playlist &#183; 25 brani</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="h-25 w-25 overflow-hidden rounded">
+                                    <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460"
+                                        class="img-fluid">
+                                </div>
+                                <div class="d-flex flex-column fs-11 my-1">
+                                    <p class="m-0 fw-bold">Brani che ti piacciono</p>
+                                    <div class="d-flex m-0 txt-gray-3">
+                                        <i class="bi bi-pin-angle-fill txt-green me-1"></i>
+                                        <p class="m-0">Playlist &#183; 25 brani</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="h-25 w-25 overflow-hidden rounded">
+                                    <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460"
+                                        class="img-fluid">
+                                </div>
+                                <div class="d-flex flex-column fs-11 my-1">
+                                    <p class="m-0 fw-bold">Brani che ti piacciono</p>
+                                    <div class="d-flex m-0 txt-gray-3">
+                                        <i class="bi bi-pin-angle-fill txt-green me-1"></i>
+                                        <p class="m-0">Playlist &#183; 25 brani</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="h-25 w-25 overflow-hidden rounded">
+                                    <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460"
+                                        class="img-fluid">
+                                </div>
+                                <div class="d-flex flex-column fs-11 my-1">
+                                    <p class="m-0 fw-bold">Brani che ti piacciono</p>
+                                    <div class="d-flex m-0 txt-gray-3">
+                                        <i class="bi bi-pin-angle-fill txt-green me-1"></i>
+                                        <p class="m-0">Playlist &#183; 25 brani</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="h-25 w-25 overflow-hidden rounded">
+                                    <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460"
+                                        class="img-fluid">
+                                </div>
+                                <div class="d-flex flex-column fs-11 my-1">
+                                    <p class="m-0 fw-bold">Brani che ti piacciono</p>
+                                    <div class="d-flex m-0 txt-gray-3">
+                                        <i class="bi bi-pin-angle-fill txt-green me-1"></i>
+                                        <p class="m-0">Playlist &#183; 25 brani</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="h-25 w-25 overflow-hidden rounded">
+                                    <img src="https://img.freepik.com/free-vector/gradient-background-christmas-season-celebration_52683-142045.jpg?w=996&t=st=1702560791~exp=1702561391~hmac=25e2be08734432616842d93db359f2d75638bfa992302a7b391daab25f660460"
+                                        class="img-fluid">
+                                </div>
+                                <div class="d-flex flex-column fs-11 my-1">
+                                    <p class="m-0 fw-bold">Brani che ti piacciono</p>
+                                    <div class="d-flex m-0 txt-gray-3">
+                                        <i class="bi bi-pin-angle-fill txt-green me-1"></i>
+                                        <p class="m-0">Playlist &#183; 25 brani</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--Pulsanti-->
-                <div class="d-flex">
-                    
+
+                <!-- inizio colonna centrale -->
+
+                <div class="col rounded-2 bg-gray-1 text-light">
+                    <div class="p-3">main content</div>
                 </div>
-              </div>
-              <div class="col-8 bg-dark text-light">
-                <p>Testo</p>
-              </div>
-              <div class="col-2 bg-dark text-light">
-                <p>Testo</p>
-              </div>
+
+                <!-- inizio colonna destra -->
+
+                <div class="col-2 rounded-2 bg-gray-1 p-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="text-white fs-9 fw-bold m-0">Attività amici</p>
+                        </div>
+                        <div class="">
+                            <a href="#" class="text-decoration-none">
+                                <i class="bi bi-person-plus txt-gray-3"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none">
+                                <i class="bi bi-x txt-gray-3 fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="d-flex fs-10 txt-gray-3">
+                            <div class="rounded-circle w-25 h-25">IMG</div>
+                            <div>
+                                <p class="fw-bold m-0">Charlie Hookham</p>
+                                <p class="m-0">In Camera &#183; Yumi Zouma </p>
+                                <p class="m-0">
+                                    <i class="bi bi-music-note-beamed"></i>
+                                    EP III
+                                </p>
+                            </div>
+                            <div>
+                                <p>4 ore</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- inizio barra riproduzione musica -->
+
+            <div class="w-100 position-fixed bottom-0 z-1 py-1 bg-black text-center row align-items-center">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <div class="d-flex justify-content-center align-items-center gap-3">
+                        <a href="#" class="txt-gray-3 fs-7"><i class="bi bi-shuffle"></i></a>
+                        <a href="#" class="txt-gray-3 fs-5"><i class="bi bi-skip-start-fill"></i></a>
+                        <a href="#" class="txt-gray-3 fs-4"><i class="bi bi-pause-circle-fill"></i></a>
+                        <a href="#" class="txt-gray-3 fs-5"><i class="bi bi-skip-end-fill"></i></a>
+                        <a href="#" class="txt-gray-3 fs-7"><i class="bi bi-repeat"></i></a>
+                    </div>
+                    <!-- <div>-:-- BARRA AVANZAMENTO -:--</div> -->
+                    <div class="player-wrapper">
+                        <audio>
+                            <source src="audio-file.mp3" type="audio/mp3">
+                        </audio>
+                        <div class="d-flex justify-content-center gap-3">
+                            <span>-:--</span>
+                            <input type="range" value="0" step="1" class="w-50">
+                            <span>-:--</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 d-flex gap-3">
+                    <a href="#" class="text-secondary"><i class="bi bi-file-play"></i></a>
+                    <a href="#" class="txt-gray-3"><i class="bi bi-view-list"></i></a>
+                    <a href="#" class="txt-gray-3"><i class="bi bi-person-badge"></i></a>
+                    <a href="#" class="txt-gray-3"><i class="bi bi-volume-up"></i></a>
+                </div>
             </div>
         </div>
     </main>
-    
+
 
     <!--Js-->
     <script src="../../../Bootstrap/bootstrap-5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
 </body>
+
 </html>
