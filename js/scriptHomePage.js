@@ -22,22 +22,6 @@ let SiteURL = "https://striveschool-api.herokuapp.com/api/deezer/album"+"/"+id;
                 <img src="https://e-cdns-images.dzcdn.net/images/cover/8b8fc5d117f9357b79f0a0a410a170e8/250x250-000000-80-0-0.jpg"
                     class="card-img-top rounded" alt="...">
                 <i class="bi bi-spotify text-white position-absolute start-0 p-1 fs-10"></i>
-                <p class="text-white fs-10 m-0 position-absolute bottom-0 p-1">Release Radar
-                    </h5>
-            </div>
-            <div class="card-body p-0">
-                <h5 class="card-title text-white fs-8 pt-3 pb-2 m-0">Release Radar</h5>
-                <p class="card-text txt-gray-3 fs-10 pt-0 pb-2">Ascolta tutti gli ultimi
-                    brani degli artisti che...</p>
-            </div>
-        </div>
-*/
-/*
-        <div class="card bg-gray-2 p-2">
-            <div class="position-relative">
-                <img src="https://e-cdns-images.dzcdn.net/images/cover/8b8fc5d117f9357b79f0a0a410a170e8/250x250-000000-80-0-0.jpg"
-                    class="card-img-top rounded" alt="...">
-                <i class="bi bi-spotify text-white position-absolute start-0 p-1 fs-10"></i>
                 <p class="text-white fs-10 m-0 position-absolute bottom-0 p-1">albumName
                     </h5>
             </div>
