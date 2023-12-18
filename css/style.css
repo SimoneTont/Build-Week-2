@@ -11906,4 +11906,8 @@ body {
 /* colore testo verde */
 .txt-green {
   color: rgb(33, 215, 96);
+}
+
+nav {
+  background-color: #121212;
 }/*# sourceMappingURL=style.css.map */
