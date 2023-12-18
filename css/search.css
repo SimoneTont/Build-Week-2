@@ -11886,9 +11886,9 @@ svg {
     border-color: white;
     box-shadow: none;
   }
-input{
+/* input{
   padding: 80px;
-}
+} */
 
   .classSvg > svg {
     padding: 3px;
