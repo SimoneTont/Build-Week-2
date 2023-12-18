@@ -1,0 +1,139 @@
+@import '_override_bootstrap.scss';
+
+svg {
+  background-color: black;
+  border-radius: 50%;
+}
+
+.search {
+  background-color: rgb(27, 27, 27);
+  border-radius: 18px;
+  border-color: rgb(98, 98, 98);
+  width: 220px;
+}
+
+.search::placeholder {
+  color: rgb(98, 98, 98);
+}
+
+.search:active {
+  background-color: rgb(27, 27, 27);
+  border-color: white;
+}
+
+.search:focus {
+  background-color: rgb(27, 27, 27);
+  border-color: white;
+  box-shadow: none;
+}
+
+.classSvg>svg {
+  padding: 3px;
+}
+
+.searcha>svg {
+  background-color: rgb(27, 27, 27);
+  padding: 3px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.searcha {
+  position: relative;
+}
+
+.card {
+  height: 250px;
+  width: 200px;
+  border-color: gray;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: gray;
+  color: white;
+}
+
+.card-body svg {
+  background-color: gray;
+}
+
+.musica {
+  height: 220px;
+  width: 200px;
+  border-color: gray;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.immaginiCard {
+  position: absolute;
+  bottom: -20px;
+  right: -17px;
+  height: 130px;
+  rotate: 30deg;
+  box-shadow: 2px 2px 2px black;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.footer {
+  display: none;
+}
+
+@media screen and (max-width:766px) {
+  .search::placeholder {
+    color: rgb(98, 98, 98);
+  }
+
+  .musica {
+    height: 200px;
+    width: 150px;
+    border-color: gray;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .search {
+    width: 350px;
+    border-radius: 10px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    /* Ensures the footer extends the full width of the screen */
+    background-color: #00000087;
+    /* Optional: Adds a background color to the footer */
+    z-index: 1000;
+    /* Ensures the footer stays above other content */
+  }
+}
+
+.immaginiCard {
+  position: absolute;
+  bottom: -20px;
+  right: -17px;
+  height: 120px;
+  rotate: 30deg;
+  box-shadow: 2px 2px 2px black;
+}
+
+.footer>svg {
+  padding: 5px;
+  background-color: #00000087;
+}

@@ -1,7 +1,9 @@
 @import '_override_bootstrap.scss';
-body{
-    font-family: "Circular";
-  }
+
+body {
+  font-family: "Circular";
+}
+
 /* colore sfondo dal più scuro al più chiaro */
 .bg-gray-1 {
   background-color: rgba(18, 18, 18, 7);
@@ -10,6 +12,7 @@ body{
 .bg-gray-2 {
   background-color: rgba(35, 35, 35, 14);
 }
+
 /*Sfondo verde Spotify*/
 .bg-green {
   background-color: rgba(33, 215, 96, 84);
@@ -24,6 +27,7 @@ body{
 .txt-green {
   color: rgba(33, 215, 96, 84);
 }
-nav{
-    background-color: $spotifyColor;
+
+nav {
+  background-color: $spotifyColor;
 }
