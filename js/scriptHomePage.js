@@ -10,11 +10,24 @@ console.log(window)
             progressBar.style.background = 'linear-gradient(to right, rgba(33, 215, 96, 0.84) ${percentage}%, rgba(167, 167, 167, 0.65) ${percentage}%)';
         });
 */
+/*
 let id="75621062"
 
 let SiteURL = "https://striveschool-api.herokuapp.com/api/deezer/album"+"/"+id;
+*/
 let allData=[]
 
+let SearchURL3 ="https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
+
+fetch(SearchURL3).then(response => response.json()).then(json => {GetData(json.data)})
+
+function GetData (arr)
+{
+    arr.forEach(element => {
+        allData.push(element)
+    });
+    console.log(allData)
+}
 /*document.addEventListener('DOMContentLoaded', () => {
 
     if (location.href.includes("homepage.html")) {
@@ -29,6 +42,7 @@ let allData=[]
 })*/
 
 // Artisti Album Search
+/*
 GetAllData()
 
 function GetAllData ()
@@ -51,3 +65,4 @@ function test()
   .catch((error) => console.log("Error!! " + error));
 }
 //test()
+*/
