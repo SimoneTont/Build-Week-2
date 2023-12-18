@@ -10,47 +10,44 @@ console.log(window)
             progressBar.style.background = 'linear-gradient(to right, rgba(33, 215, 96, 0.84) ${percentage}%, rgba(167, 167, 167, 0.65) ${percentage}%)';
         });
 */
-let ID="75621062"
-let URL = "https://striveschool-api.herokuapp.com/api/deezer/album/"+ID;
+let id="75621062"
 
-GetAllData()
-
+let SiteURL = "https://striveschool-api.herokuapp.com/api/deezer/album"+"/"+id;
 let allData=[]
+
+/*document.addEventListener('DOMContentLoaded', () => {
+
+    if (location.href.includes("homepage.html")) {
+
+        let url = new URL(location.href);
+
+        let id = url.searchParams.get('id');
+
+        readDataById(id);
+    }
+    
+})*/
+
+// Artisti Album Search
+GetAllData()
 
 function GetAllData ()
 {
-    fetch(URL).then(response => response.json()).then(json => {CreateCard(json)})
+    fetch(SiteURL).then(response => response.json()).then(json => {CreateCard(json)})
 }
 function CreateCard (obj)
 {
-
-    if(obj.error==undefined)
-    {
-        allData.push(obj)
-    }
-    console.log(allData)
-    console.log(allData[0].error)
+    console.log(obj)
 }
 
-/*const apiUrl = "https://striveschool-api.herokuapp.com/api/deezer/album";
-let allData = [];
-
-function getAllData(url) {
-  return fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      allData = allData.concat(data.items);
-
-      if (data.nextPage) {
-        return getAllData(data.nextPage);
-      } else {
-        console.log('Tutti i dati sono stati ottenuti:', allData);
-        return allData;
-      }
-    })
-    .catch(error => {
-      console.error('Errore durante la richiesta API:', error);
-    });
+function test()
+{
+    fetch("https://striveschool-api.herokuapp.com/api/deezer/album", { method: "GET" })
+  .then((response) => response.json())
+  .then((obj) => {
+    console.log(obj);
+    createList(obj);
+  })
+  .catch((error) => console.log("Error!! " + error));
 }
-
-getAllData(apiUrl);*/
+//test()
