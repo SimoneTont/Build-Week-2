@@ -66,7 +66,7 @@ function CreateCard(Obj) {
     let CardDiv = document.createElement("div");//Crea CardDiv
     CurrentCardContainer.appendChild(CardDiv);//Div append a container
     CardDiv.classList.add("card", "col", "bg-gray-2", "p-2", "mx-2", "overflow-hidden");
-    //CardDiv.style.width= "10em";
+    CardDiv.style.width= "10em";
     //CardDiv.style.height = "20em";//Aggiungi classi e stile a CardDiv
 
     let relativeCardDiv = document.createElement("div")
