@@ -29,6 +29,7 @@ async function fetchAll(url1, url2, url3, url4) {
     })
     console.log(allData)
     randomSelector(allData)
+    randomMain(allData)
 }
 
 fetchAll(SearchURL1, SearchURL2, SearchURL3, SearchURL4)
@@ -39,7 +40,6 @@ function randomSelector(arrObj) {
 
     for (let i = 0; i < (CContainers.length * 4); i++) {
         let random
-
         do {
             random = Math.floor(Math.random() * 100);
         }
@@ -48,11 +48,13 @@ function randomSelector(arrObj) {
 
         CreateCard(arrObj[random])
     }
-    /* let numeroEstratto;
-        do {
-            numeroEstratto = (Math.ceil(Math.random() * 76));
-        } while (numeriEstratti.includes(numeroEstratto));
-        numeriEstratti.push(numeroEstratto); */
+}
+
+function randomMain (arrObj)
+{
+    let random = Math.floor(Math.random() * 100);
+    let obj = arrObj[random]
+    CreateMainCard(obj)
 }
 
 let c = 0 //contatore funzione
@@ -111,4 +113,20 @@ function CreateCard(Obj) {
     }
     console.log(c)
     console.log(n)
+}
+
+function CreateMainCard (obj)
+{
+    console.log(obj)
+    let imgContainer=document.querySelector("#MainPlaylistImg")
+    let newImg=document.createElement("img")
+    imgContainer.appendChild(newImg);
+    newImg.src=obj.album.cover_medium;
+    let containerTitolo=document.querySelector("#MainTitolo")
+    let titolo=document.createElement("p")
+    titolo.classList.add("fs-1")
+    titolo.innerText=obj.album.title
+    containerTitolo.appendChild(titolo)
+
+    localStorage.setItem("IdAlbum",JSON.stringify(obj.album.id))
 }
