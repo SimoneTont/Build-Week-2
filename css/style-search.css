@@ -12064,11 +12064,11 @@ svg {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opzionale: per ombra */
     padding: 16px; /* Spazio all'interno della card */
     margin:10px;
-  height: 220px;
-  width: 200px;
-  background-color: gray;
-  border-radius: 10px;
-  background-color: #242424;
+    height: 220px;
+    width: 200px;
+    background-color: gray;
+    border-radius: 10px;
+    background-color: #242424;
 }
 .imgArtisti{
   border-radius: 50%;
