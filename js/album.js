@@ -7,6 +7,9 @@ async function func() {
         let p=document.querySelector(".album")
         console.log(p)
         p.innerHTML=`${s.tracks.data[0].album.title}`
+        let image = document.querySelector(".imageAlbum")
+        console.log(image)
+        image.src= `${s.tracks.data[0].album.cover_medium}`
         s.tracks.data.forEach((e,index) => {
             let div2=document.createElement("div")
             div2.innerHTML=`<div class="row d-flex align-items-center text-white-50 fs-9 mt-3">
