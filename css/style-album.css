@@ -11994,4 +11994,8 @@ input[type=range]::-ms-track {
 .cursore:hover {
   cursor: pointer;
   background-color: #1A1A1A;
+}
+
+.ground {
+  background-color: rgba(26, 26, 26, 0.75);
 }/*# sourceMappingURL=style-album.css.map */
