@@ -1,7 +1,7 @@
-
-
-async function func() {
-    await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/523909312")
+let storage= localStorage.getItem("IdAlbum")
+storage=JSON.parse(storage)
+async function funcAPI() {
+    await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${storage}`)
     .then(response=>response.json()).then(s=>{
         console.log(s.tracks.data)
         let div=document.querySelector("div .fs-9")
@@ -39,6 +39,6 @@ async function func() {
         span.innerHTML=` ${s.tracks.data[0].artist.name} - num. Brani ${s.tracks.data.length} - durata ${durata}   min`
     })  
 }
-func()
+funcAPI()
 
 
