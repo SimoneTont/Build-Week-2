@@ -721,7 +721,7 @@ progress {
   color: #6c757d;
 }
 .blockquote-footer::before {
-  content: "— ";
+  content: "— ";
 }
 
 .img-fluid {
@@ -12035,8 +12035,9 @@ svg {
   width: 30em;
   height: 70px;
   margin-left: 5vh;
-  border-radius:1em;
+  border-radius:5px;
   background-color: #242424;
+  overflow: hidden;
 }
 
 .brano:hover {
@@ -12049,7 +12050,7 @@ svg {
   background-color: #181818;
   width: 6.3vh;
   padding:0.7vh;
-  border-radius: 80vh
+  border-radius: 80vh;
 }
 
 .titolo {
@@ -12064,11 +12065,11 @@ svg {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opzionale: per ombra */
     padding: 16px; /* Spazio all'interno della card */
     margin:10px;
-  height: 220px;
-  width: 200px;
-  background-color: gray;
-  border-radius: 10px;
-  background-color: #242424;
+    height: 220px;
+    width: 200px;
+    background-color: gray;
+    border-radius: 10px;
+    background-color: #242424;
 }
 .imgArtisti{
   border-radius: 50%;
