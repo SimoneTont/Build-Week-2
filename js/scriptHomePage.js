@@ -1,156 +1,114 @@
 console.log(window)
 
-/*const progressBar = document.querySelector('.player-wrapper input');
+let SearchURL1 = "https://striveschool-api.herokuapp.com/api/deezer/search?q=Gemitaiz"
+let SearchURL2 = "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
+let SearchURL3 = "https://striveschool-api.herokuapp.com/api/deezer/search?q=salmo"
+let SearchURL4 = "https://striveschool-api.herokuapp.com/api/deezer/search?q=marracash"
 
-        progressBar.addEventListener('input', function() {
-            // Calcola la percentuale di avanzamento
-            const percentage = (progressBar.value - progressBar.min) / (progressBar.max - progressBar.min) * 100;
-
-            // Aggiorna il colore solo della parte sinistra del cursore
-            progressBar.style.background = 'linear-gradient(to right, rgba(33, 215, 96, 0.84) ${percentage}%, rgba(167, 167, 167, 0.65) ${percentage}%)';
+async function fetchAll(url1, url2, url3, url4) {
+    let allData = []
+    await fetch(url1).then(response => response.json()).then(json => {
+        json.data.forEach(element => {
+            allData.push(element)
         });
-*/
-/*
-let id="75621062"
-
-let SiteURL = "https://striveschool-api.herokuapp.com/api/deezer/album"+"/"+id;
-*/
-
-/*
-        <div class="card bg-gray-2 p-2">
-            <div class="position-relative">
-                <img src="https://e-cdns-images.dzcdn.net/images/cover/8b8fc5d117f9357b79f0a0a410a170e8/250x250-000000-80-0-0.jpg"
-                    class="card-img-top rounded" alt="...">
-                <i class="bi bi-spotify text-white position-absolute start-0 p-1 fs-10"></i>
-                <p class="text-white fs-10 m-0 position-absolute bottom-0 p-1">albumName
-                    </h5>
-            </div>
-            <div class="card-body p-0">
-                <h5 class="card-title text-white fs-8 pt-3 pb-2 m-0">albumName</h5>
-                <p class="card-text txt-gray-3 fs-10 pt-0 pb-2">Ascolta tutti gli ultimi
-                    brani degli artisti che...</p>
-            </div>
-        </div>
-*/
-
-let SearchURL1 ="https://striveschool-api.herokuapp.com/api/deezer/search?q=Gemitaiz"
-let SearchURL2 ="https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
-let SearchURL3 ="https://striveschool-api.herokuapp.com/api/deezer/search?q=salmo"
-let SearchURL4 ="https://striveschool-api.herokuapp.com/api/deezer/search?q=marracash"
-
-async function fetchAll (a,b,c,d)
-{
-    let allData=[]
-    await fetch(a).then(response => response.json()).then(json => {json.data.forEach(element => {
-        allData.push(element)
-    });})
-    await fetch(b).then(response => response.json()).then(json => {json.data.forEach(element => {
-        allData.push(element)
-    });})
-    await fetch(c).then(response => response.json()).then(json => {json.data.forEach(element => {
-        allData.push(element)
-    });})
-    await fetch(d).then(response => response.json()).then(json => {json.data.forEach(element => {
-        allData.push(element)
-    });})
+    })
+    await fetch(url2).then(response => response.json()).then(json => {
+        json.data.forEach(element => {
+            allData.push(element)
+        });
+    })
+    await fetch(url3).then(response => response.json()).then(json => {
+        json.data.forEach(element => {
+            allData.push(element)
+        });
+    })
+    await fetch(url4).then(response => response.json()).then(json => {
+        json.data.forEach(element => {
+            allData.push(element)
+        });
+    })
     console.log(allData)
     randomSelector(allData)
 }
 
-fetchAll (SearchURL1,SearchURL2, SearchURL3, SearchURL4)
+fetchAll(SearchURL1, SearchURL2, SearchURL3, SearchURL4)
 
-function randomSelector (arr)
-{
-    let random=Math.floor(Math.random()*100)
-    console.log(arr[random])
+function randomSelector(arrObj) {
+    let arrControllo = []
+    let CContainers = document.querySelectorAll('.CardContainer');
+
+    for (let i = 0; i < (CContainers.length * 4); i++) {
+        let random
+
+        do {
+            random = Math.floor(Math.random() * 100);
+        }
+        while (arrControllo.includes(arrObj[random].album.title)); //Se titolo album è già in arrcontrollo ripeti
+        arrControllo.push(arrObj[random].album.title);
+
+        CreateCard(arrObj[random])
+    }
+    /* let numeroEstratto;
+        do {
+            numeroEstratto = (Math.ceil(Math.random() * 76));
+        } while (numeriEstratti.includes(numeroEstratto));
+        numeriEstratti.push(numeroEstratto); */
 }
 
+let c = 0 //contatore funzione
+let n = 0 //contatore righe
 //Card creation
-function CreateCard (Obj)
-{
-    let container = document.querySelector('.CardContainer');
+function CreateCard(Obj) {
+
+    let CardContainers = document.querySelectorAll('.CardContainer');
+    let CurrentCardContainer = CardContainers[n]
+
     let CardDiv = document.createElement("div");//Crea CardDiv
-    container.appendChild(CardDiv);//Div append a container
-    CardDiv.classList.add("card", "m-4", "col");
-    CardDiv.style.width= "18rem";//Aggiungi classi e stile a CardDiv
+    CurrentCardContainer.appendChild(CardDiv);//Div append a container
+    CardDiv.classList.add("card", "col", "bg-gray-2", "p-2", "mx-2", "overflow-hidden");
+    //CardDiv.style.width= "10rem";
+    CardDiv.style.height = "20em";//Aggiungi classi e stile a CardDiv
+
+    let relativeCardDiv = document.createElement("div")
+    CardDiv.appendChild(relativeCardDiv);//div relative
+    relativeCardDiv.classList.add("position-relative");
 
     let imag = document.createElement("img");//Crea imag
-    imag.classList.add("img-fluid");
-    CardDiv.appendChild(imag);//imag dentro CardDiv
-    imag.src=Obj.imageUrl;
-    imag.alt=Obj._id;
+    imag.classList.add("card-img-top", "rounded");
+    relativeCardDiv.appendChild(imag);//imag dentro relativeCardDiv
+    imag.src = Obj.album.cover;
+    imag.alt = Obj.album.md5_image;
+
+    let cardIcon = document.createElement("i") //Icona Spotify
+    cardIcon.classList.add("bi", "bi-spotify", "text-white", "position-absolute", "start-0", "p-1", "fs-10",)
+    relativeCardDiv.appendChild(cardIcon);
+
+    let albumTitle1 = document.createElement("p");//Titolo Album1
+    albumTitle1.classList.add("text-white", "fs-10", "m-0", "position-absolute", "bottom-0", "p-1");
+    relativeCardDiv.appendChild(albumTitle1); //Sopra immagine album
+    albumTitle1.innerText = Obj.album.title;
+
+    //Fine div relative, inizio cardBody
 
     let CardBody = document.createElement("div");//Crea CardBody
     CardBody.classList.add("card-body");
     CardDiv.appendChild(CardBody);//CardBody dentro CardDiv
 
-    let itemName = document.createElement("h5");//Crea CardBody
-    itemName.classList.add("card-title");
-    CardBody.appendChild(itemName);
-    itemName.innerText=Obj.name;
+    let albumTitle2 = document.createElement("h5");//Titolo Album2
+    albumTitle2.classList.add("card-title", "text-white", "fs-8", "pt-3", "pb-2", "m-0");
+    CardBody.appendChild(albumTitle2); //Sotto immagine album
+    albumTitle2.innerText = Obj.album.title;
 
-    let brandName = document.createElement("p");//Crea CardBody
-    brandName.classList.add("card-text");
-    CardBody.appendChild(brandName);
-    brandName.innerText=Obj.brand;
-
-    let ItemDescription = document.createElement("p");
-    ItemDescription.classList.add("card-text");
-    CardBody.appendChild(ItemDescription);
-    ItemDescription.innerText=Obj.description
-
-    let cost = document.createElement("p");
-    cost.classList.add("card-text");
-    CardBody.appendChild(cost);
-    cost.innerText=Obj.price +"€";
-
-    let deletionButton = document.createElement("button");
-    deletionButton.classList.add("btn","btn-danger", "d-none", "DeletionButton");
-    CardBody.appendChild(deletionButton);
-    deletionButton.innerText="Delete from server"
-
-    let editingButton = document.createElement("button");
-    editingButton.classList.add("btn","btn-success", "d-none", "EditButton");
-    CardBody.appendChild(editingButton);
-    editingButton.innerText="Edit item"
+    let flavorText = document.createElement("p");
+    flavorText.classList.add("card-text", "txt-gray-3", "fs-10", "pt-0", "pb-2")
+    CardBody.appendChild(flavorText);
+    flavorText.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptate esse neque non rerum facere laboriosam natus iste culpa. Deserunt iste expedita, suscipit provident praesentium quos reiciendis tenetur voluptatibus delectus?"
 
     console.log(Obj)
-}
-/*document.addEventListener('DOMContentLoaded', () => {
-
-    if (location.href.includes("homepage.html")) {
-
-        let url = new URL(location.href);
-
-        let id = url.searchParams.get('id');
-
-        readDataById(id);
+    c++
+    if (c % 4 === 0) {
+        n++
     }
-    
-})*/
-
-// Artisti Album Search
-/*
-GetAllData()
-
-function GetAllData ()
-{
-    fetch(SiteURL).then(response => response.json()).then(json => {CreateCard(json)})
+    console.log(c)
+    console.log(n)
 }
-function CreateCard (obj)
-{
-    console.log(obj)
-}
-
-function test()
-{
-    fetch("https://striveschool-api.herokuapp.com/api/deezer/album", { method: "GET" })
-  .then((response) => response.json())
-  .then((obj) => {
-    console.log(obj);
-    createList(obj);
-  })
-  .catch((error) => console.log("Error!! " + error));
-}
-//test()
-*/
