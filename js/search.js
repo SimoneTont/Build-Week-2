@@ -4,12 +4,15 @@ let inputElement = document.querySelector('.prova');
 
 
 
-inputElement.addEventListener('change', function() {
-    // Ottieni il valore dell'input e salvalo in una variabile
+inputElement.addEventListener('keydown', function(e) {
+
+if (e.key=== "Enter"){
+    e.preventDefault();
+
     let query = inputElement.value;
 rimuovi();
 faiIlFetch(query);
-
+}
 
     // Puoi utilizzare la variabile 'query' per le tue necessità
    // console.log(query); // Ad esempio, stampa il valore nella console
@@ -64,7 +67,7 @@ function creaCard(dati) {
                 <img src="${dato.album.cover_small}">
                 <div class="d-flex flex-column">
                 <p class="titolo">${dato.title}</p>
-                <p class="artisti">${dato.artist.name}</p>
+                <p class="artisti ms-4">${dato.artist.name}</p>
                 </div>
             </div>
         `;
