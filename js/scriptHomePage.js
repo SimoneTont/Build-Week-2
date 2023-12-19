@@ -66,8 +66,8 @@ function CreateCard(Obj) {
     let CardDiv = document.createElement("div");//Crea CardDiv
     CurrentCardContainer.appendChild(CardDiv);//Div append a container
     CardDiv.classList.add("card", "col", "bg-gray-2", "p-2", "mx-2", "overflow-hidden");
-    //CardDiv.style.width= "10rem";
-    CardDiv.style.height = "20em";//Aggiungi classi e stile a CardDiv
+    //CardDiv.style.width= "10em";
+    //CardDiv.style.height = "20em";//Aggiungi classi e stile a CardDiv
 
     let relativeCardDiv = document.createElement("div")
     CardDiv.appendChild(relativeCardDiv);//div relative
@@ -102,7 +102,7 @@ function CreateCard(Obj) {
     let flavorText = document.createElement("p");
     flavorText.classList.add("card-text", "txt-gray-3", "fs-10", "pt-0", "pb-2")
     CardBody.appendChild(flavorText);
-    flavorText.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptate esse neque non rerum facere laboriosam natus iste culpa. Deserunt iste expedita, suscipit provident praesentium quos reiciendis tenetur voluptatibus delectus?"
+    flavorText.innerText = "Descrizione canzone"
 
     console.log(Obj)
     c++
