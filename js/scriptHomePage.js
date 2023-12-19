@@ -68,7 +68,7 @@ function randomSelector (arr)
 //Card creation
 function CreateCard (Obj)
 {
-    let container = document.querySelector('#PrimoCardContainer');
+    let container = document.querySelector('.CardContainer');
     let CardDiv = document.createElement("div");//Crea CardDiv
     container.appendChild(CardDiv);//Div append a container
     CardDiv.classList.add("card", "m-4", "col");
