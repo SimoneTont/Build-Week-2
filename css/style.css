@@ -11908,6 +11908,12 @@ body {
   color: rgb(33, 215, 96);
 }
 
-nav {
-  background-color: #121212;
+.side-bar {
+  flex: 0 0 300px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .side-bar {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

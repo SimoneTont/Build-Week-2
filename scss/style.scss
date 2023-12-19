@@ -28,6 +28,12 @@ body {
   color: rgba(33, 215, 96, 84);
 }
 
-nav {
-  background-color: $spotifyColor;
+.side-bar {
+  flex: 0 0 300px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .side-bar {
+    display: none;
+  }
 }
