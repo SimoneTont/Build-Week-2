@@ -1,5 +1,5 @@
 let storage= localStorage.getItem("IdAlbum")
-
+storage=JSON.parse(storage)
 async function funcAPI() {
     await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${storage}`)
     .then(response=>response.json()).then(s=>{
