@@ -12013,3 +12013,63 @@ svg {
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.5294117647);
 }/*# sourceMappingURL=style-search.css.map */
+#immagine{
+  height:100px;
+  border-radius: 50%;
+}
+.arts:hover{
+  background-color: #282828;
+}
+
+.ombra{
+  color: white;
+}
+.arts {
+  background-color: #242424;
+  padding: 3em;
+  border-radius: 1em;
+  height:19em;
+}
+.brano {
+  margin: 5px;
+  width: 30em;
+  height: 70px;
+  margin-left: 5vh;
+  border-radius:1em;
+  background-color: #242424;
+}
+
+.brano:hover {
+  background-color: #282828;
+
+
+}
+
+.artista {
+  background-color: #181818;
+  width: 6.3vh;
+  padding:0.7vh;
+  border-radius: 80vh
+}
+
+.titolo {
+
+  margin-left: 3vh;
+ 
+  font-weight: bold;
+}
+.cardArtisti{
+ 
+    border-radius: 8px; /* Opzionale: per bordi arrotondati */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opzionale: per ombra */
+    padding: 16px; /* Spazio all'interno della card */
+    margin:10px;
+  height: 220px;
+  width: 200px;
+  background-color: gray;
+  border-radius: 10px;
+  background-color: #242424;
+}
+.imgArtisti{
+  border-radius: 50%;
+}
